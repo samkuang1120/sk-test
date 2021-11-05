@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sk.sktest.mapper.MonthlyIncomeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sk.sktest.model.MonthlyIncomeDO">
+        <id column="income_id" property="incomeId" />
+        <result column="location" property="location" />
+        <result column="txn_time" property="txnTime" />
+        <result column="total_buy_amt" property="totalBuyAmt" />
+        <result column="total_sell_amt" property="totalSellAmt" />
+        <result column="income_amt" property="incomeAmt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        income_id, location, txn_time, total_buy_amt, total_sell_amt, income_amt
+    </sql>
+
+</mapper>

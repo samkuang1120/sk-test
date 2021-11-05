@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sk.sktest.mapper.TransactionsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sk.sktest.model.TransactionsDO">
+        <id column="txn_id" property="txnId" />
+        <result column="product_name" property="productName" />
+        <result column="buy_price" property="buyPrice" />
+        <result column="qty" property="qty" />
+        <result column="sell_price" property="sellPrice" />
+        <result column="txn_time" property="txnTime" />
+        <result column="location" property="location" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        txn_id, product_name, buy_price, qty, sell_price, txn_time, location
+    </sql>
+
+</mapper>
