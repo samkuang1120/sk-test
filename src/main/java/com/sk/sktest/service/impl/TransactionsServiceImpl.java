@@ -33,7 +33,7 @@ public class TransactionsServiceImpl extends ServiceImpl<TransactionsMapper, Tra
 
         Page<TransactionsDO> pageInfo = new Page<>(page,size);
 
-        IPage<TransactionsDO> transDOPage = transMapper.selectPage(pageInfo,new QueryWrapper<TransactionsDO>().like("product_name", productName));
+        IPage<TransactionsDO> transDOPage = transMapper.selectPage(pageInfo,new QueryWrapper<TransactionsDO>().like("product_name", productName).orderByDesc("txn_id"));
 
         List<TransactionsDO> transDOList =  transDOPage.getRecords();
 
